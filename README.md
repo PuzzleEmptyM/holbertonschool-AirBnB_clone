@@ -9,7 +9,7 @@ description of the command interpreter:
     examples
 
 
-## Structure
+## File Structure Visual:
 
 ```
 .
