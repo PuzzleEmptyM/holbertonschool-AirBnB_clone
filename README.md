@@ -8,6 +8,7 @@ description of the command interpreter:
     how to use it
     examples
 
+![Directory Structure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/your-repo/your-branch/directory_structure.puml)
 
 .
 ├── AUTHORS
