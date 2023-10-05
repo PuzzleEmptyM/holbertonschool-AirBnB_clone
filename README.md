@@ -10,33 +10,33 @@ description of the command interpreter:
 
 
 .
-├── AUTHORS
-├── README.md
-├── console.py
-├── file.json
-├── models
-│   ├── __init__.py
-│   ├── amenity.py
-│   ├── base_model.py
-│   ├── city.py
-│   ├── engine
-│   │   ├── __init__.py
-│   │   └── file_storage.py
-│   ├── place.py
-│   ├── review.py
-│   ├── state.py
-│   └── user.py
-└── tests
-    ├── __init__.py
-    └── test_models
-        ├── __init__.py
-        ├── test_amenity.py
-        ├── test_base_model.py
-        ├── test_city.py
-        ├── test_engine
-        │   ├── __init__.py
-        │   └── test_file_storage.py
-        ├── test_place.py
-        ├── test_review.py
-        ├── test_state.py
-        └── test_user.py
+├── AUTHORS <br>
+├── README.md <br>
+├── console.py <br>
+├── file.json <br>
+├── models <br>
+│   ├── __init__.py <br>
+│   ├── amenity.py <br>
+│   ├── base_model.py <br>
+│   ├── city.py <br>
+│   ├── engine <br>
+│   │   ├── __init__.py <br>
+│   │   └── file_storage.py <br>
+│   ├── place.py <br>
+│   ├── review.py <br>
+│   ├── state.py <br>
+│   └── user.py <br>
+└── tests <br>
+    ├── __init__.py <br>
+    └── test_models <br>
+        ├── __init__.py <br>
+        ├── test_amenity.py <br>
+        ├── test_base_model.py <br>
+        ├── test_city.py <br>
+        ├── test_engine <br>
+        │   ├── __init__.py <br>
+        │   └── test_file_storage.py <br>
+        ├── test_place.py <br>
+        ├── test_review.py <br>
+        ├── test_state.py <br>
+        └── test_user.py <br>
