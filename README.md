@@ -10,6 +10,9 @@ description of the command interpreter:
 
 ![Directory Structure](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/your-repo/your-branch/directory_structure.puml)
 
+## File Structure Visual:
+
+```
 .
 ├── AUTHORS
 ├── README.md
@@ -41,3 +44,4 @@ description of the command interpreter:
         ├── test_review.py
         ├── test_state.py
         └── test_user.py
+```
