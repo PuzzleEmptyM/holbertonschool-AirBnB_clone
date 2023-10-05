@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+# console.py
 """Defines the AirBnb clone console."""
-
 import cmd
 
 
-class AirBnbCloneInterperter(cmd.Cmd):
-    prompt = "> "  # Set the command prompt
+class HBNBCommand(cmd.Cmd):
+    """ Set the command prompt """
+    prompt = '(hbnb)'
 
     def do_create(self, args):
         """Create a new object"""
@@ -35,3 +36,7 @@ class AirBnbCloneInterperter(cmd.Cmd):
     def do_quit(self, args):
         """Exit the command interpreter"""
         return True
+
+
+if __name__ == '__main__':
+    HBNBCommand().cmdloop()
