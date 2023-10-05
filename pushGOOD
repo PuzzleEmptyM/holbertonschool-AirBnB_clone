@@ -1,6 +1,6 @@
 #!/bin/bash
-git add $1 
-echo "enter commit title: "
+git add $1
+echo "Epic commit title here: "
 read commit_title 
 git commit -m "$commit_title"
 git push
