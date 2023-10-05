@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
-
+"""Defines the AirBnb clone console."""
 
 import cmd
+
 
 class AirBnbCloneInterperter(cmd.Cmd):
     prompt = "> "  # Set the command prompt
