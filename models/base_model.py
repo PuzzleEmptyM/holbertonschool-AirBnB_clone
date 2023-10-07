@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 # base_model.py
-"""Defines a new class BaseModel"""
+"""Defines class BaseModel"""
 import models
 from uuid import uuid4
 from datetime import datetime
 
 
 class BaseModel:
-    """Creates an new BaseModel"""
+    """Creates new BaseModel"""
 
     def __init__(self, *args, **kwargs):
-        """Initializes a new instance of BaseModel.
+        """Initializes new instance of BaseModel.
 
         Args:
             args (any): Not used
@@ -32,12 +32,12 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """Updates most recent change time"""
+        """Updates most recent change in time"""
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """Creates a dictionary representation of the obj"""
+        """Creates dictionary representation of obj"""
         new_dict = self.__dict__.copy()
         new_dict["created_at"] = self.created_at.isoformat()
         new_dict["updated_at"] = self.updated_at.isoformat()
@@ -45,6 +45,6 @@ class BaseModel:
         return new_dict
 
     def __str__(self):
-        """Returns the string representation of the obj"""
+        """Returns string representation of obj"""
         cls = self.__class__.__name__
         return "[{}] ({}) {}".format(cls, self.id, self.__dict__)
