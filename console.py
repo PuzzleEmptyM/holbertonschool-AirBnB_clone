@@ -33,6 +33,43 @@ class HBNBCommand(cmd.Cmd):
         print("Logging out...")
         return True
 
+    def do_EOF(self, args):
+        """Exit the command interpreter"""
+        print("Logging out...")
+        return True
+
+    def emptyline(self):
+        """Do nothing upon receiving an empty line."""
+        pass
+
+    def help_quit(self):
+        """Help message for the quit command"""
+        print("Quit command to exit the program")
+
+    def help_create(self):
+        """Help message for the create command"""
+        print("Create a new object")
+
+    def help_retrieve(self):
+        """Help message for the retrieve command"""
+        print("Retrieve an object")
+
+    def help_operations(self):
+        """Help message for the operations command"""
+        print("Perform operations on objects")
+
+    def help_update(self):
+        """Help message for the update command"""
+        print("Update attributes of an object")
+
+    def help_destroy(self):
+        """Help message for the destroy command"""
+        print("Destroy an object")
+
+    def help_help(self):
+        """Help message for the help command"""
+        print("Show help messages for commands")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
