@@ -5,13 +5,13 @@
 # Description
 This project is a clone of AirBnB on a command line interface that allows the user to manage various AirBnB objects, including places, users, cities, and more. This project is written in Python 3, making use of the cmd module to manage the command line interface.
 
-## Installation
+# Installation
 Ensure you have Python 3 installed. Then, simply clone the repository.
 ```
 git clone https://github.com/PuzzleEmptyM/holbertonschool-AirBnB_clone.git
 ```
 
-## How to start
+# How to start
 To start the program, navigate to the directory containing console.py and run the file with python3, 
 ```
 python3 console.py
@@ -33,11 +33,7 @@ The command interpreter allows you to manage the objects of your project.
 * update <class name> <id> <attribute name> <attribute value> to update an instance based on the class name and id by adding or updating attribute.
 
 
-description of the command interpreter:
-    how to start it
-    how to use it
-    examples
-```
+
 
 ## File Structure Visual:
 
