@@ -30,12 +30,12 @@ The command interpreter allows you to manage the objects of your project.
 
 
 ### Commands
-* quit or EOF to exit the program.
-* create <class name> to create a new instance of the class.
-* show <class name> <id> to display the specific instance based on the class name and id.
-* destroy <class name> <id> to destroy a specific instance based on the class name and id.
-* all <class name> or just all to display all instances of a class or all instances of every class.
-* update <class name> <id> <attribute name> <attribute value> to update an instance based on the class name and id by adding or updating attribute.
+* `quit` or `EOF` to exit the program.
+* `create <class name>` to create a new instance of the class.
+* `show <class name> <id>` to display the specific instance based on the class name and id.
+* `destroy <class name> <id>` to destroy a specific instance based on the class name and id.
+* `all <class name>` or just all to display all instances of a class or all instances of every class.
+* `update <class name> <id> <attribute name> <attribute value>` to update an instance based on the class name and id by adding or updating attribute.
 
 
 #Examples
