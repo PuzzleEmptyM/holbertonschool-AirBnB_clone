@@ -29,7 +29,7 @@ or with the dot-slash command.
 The command interpreter allows you to manage the objects of your project.
 
 
-## Commands
+### Commands
 * quit or EOF to exit the program.
 * create <class name> to create a new instance of the class.
 * show <class name> <id> to display the specific instance based on the class name and id.
