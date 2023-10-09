@@ -12,11 +12,11 @@ git clone https://github.com/PuzzleEmptyM/holbertonschool-AirBnB_clone.git
 ```
 
 ## How to start
-To start the program, navigate to the directory containing console.py and either run the file with Python 3.
+To start the program, navigate to the directory containing console.py and run the file with python3, 
 ```
 python3 console.py
 ```
-or
+or with the dot-slash command.
 ```
 ./console.py
 ```
