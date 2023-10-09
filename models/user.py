@@ -4,7 +4,8 @@ from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """Represent a User.
+    """
+    Represent a User.
 
     Attributes:
         email (str): The email of the user.

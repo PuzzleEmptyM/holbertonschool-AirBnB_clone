@@ -76,11 +76,12 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, arg):
         """Quit command to exit the program."""
+        print("Sad to see you leave \n See you later \n Logging out...")
         return True
 
     def do_EOF(self, arg):
         """EOF signal to exit the program."""
-        print("")
+        print("Sad to see you leave \n See you later \n Logging out...")
         return True
 
     def do_create(self, arg):
