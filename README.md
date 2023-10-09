@@ -1,15 +1,18 @@
 ![holberton AIRBNB logo](https://github.com/PuzzleEmptyM/holbertonschool-AirBnB_clone/assets/129412985/bf9ea8b2-7337-4575-9ccc-bc244b78920a)
 # The AirBnB clone
-## This is a simple clone of the AirBNB website, created by Puzzle Moser and Amir Colbert
+## This is a simple clone of the AirBNB website, created by Puzzle Moser and Amir Colbert.
+
 
 # Description
 This project is a clone of AirBnB on a command line interface that allows the user to manage various AirBnB objects, including places, users, cities, and more. This project is written in Python 3, making use of the cmd module to manage the command line interface.
+
 
 # Installation
 Ensure you have Python 3 installed. Then, simply clone the repository.
 ```
 git clone https://github.com/PuzzleEmptyM/holbertonschool-AirBnB_clone.git
 ```
+
 
 # How to start
 To start the program, navigate to the directory containing console.py and run the file with python3, 
@@ -21,8 +24,10 @@ or with the dot-slash command.
 ./console.py
 ```
 
+
 # Usage
 The command interpreter allows you to manage the objects of your project.
+
 
 ## Commands
 * quit or EOF to exit the program.
@@ -33,9 +38,24 @@ The command interpreter allows you to manage the objects of your project.
 * update <class name> <id> <attribute name> <attribute value> to update an instance based on the class name and id by adding or updating attribute.
 
 
+#Examples
+To create a new object:
+```
+create BaseModel
+```
+To display a specific instance:
+```
+show BaseModel 1234-1234-1234
+```
 
 
-## File Structure Visual:
+#Testing
+Tests for this project are contained in the tests directory, and can be run using the Python unittest module. For example, to run all tests for the BaseModel class, use:
+```
+python3 -m unittest tests/test_models/test_base_model.py
+```
+
+# File Structure Visual:
 
 ```
 .
@@ -70,3 +90,7 @@ The command interpreter allows you to manage the objects of your project.
         ├── test_state.py
         └── test_user.py
 ```
+
+# Credits
+This project was created by : Amir Colbert : https://github.com/ <br> 
+and Puzzle Moser : https://github.com/ 
