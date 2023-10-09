@@ -1,7 +1,7 @@
 ![holberton AIRBNB logo](https://github.com/PuzzleEmptyM/holbertonschool-AirBnB_clone/assets/129412985/bf9ea8b2-7337-4575-9ccc-bc244b78920a)
 # The AirBnB clone
 ## This is a simple clone of the AirBNB website, created by Puzzle Moser and Amir Colbert
-```
+
 # Description
 This project is a clone of AirBnB on a command line interface that allows the user to manage various AirBnB objects, including places, users, cities, and more. This project is written in Python 3, making use of the cmd module to manage the command line interface.
 
