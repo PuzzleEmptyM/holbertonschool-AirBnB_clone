@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 # console.py
-"""Defines the AirBnb clone console."""
+"""Defines the AirBnB console."""
 import cmd
+import re
 from models import storage
 from models.base_model import BaseModel
 from models.user import User
@@ -17,66 +18,118 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
 
     def do_create(self, args):
-        """Create a new object"""
-        print("Object created")
+        """Creates a new object"""
+        if not args:
+            print("** no class name **")
+            return
+        if args not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
+            return
+        new_instance = eval(args)()
+        new_instance.save()
+        print(new_instance.id)
 
-    def do_retrieve(self, args):
-        """Retrieve an object"""
-        print("Object retrieved")
+    def do_show(self, args):
+        """Shows instance based on classname and ID"""
+        if not args:
+            print("** no class name **")
+            return
+        arg_list = args.split()
+        class_name = arg_list[0]
 
-    def do_operations(self, args):
-        """Perform operations on objects"""
-        print("Operations performed")
+        if class_name not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
+            return
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
+        instance_id = arg_list[1]
+        key = "{}.{}".format(class_name, instance_id)
+        all_objects = storage.all()
 
-    def do_update(self, args):
-        """Update attributes of an object"""
-        print("Object attributes updated")
+        if key in all_objects:
+            print(all_objects[key])
+        else:
+            print("** no instance found **")
 
     def do_destroy(self, args):
         """Destroy an object"""
-        print("Object destroyed")
+        if not args:
+            print("** no class name **")
+            return
+        arg_list = args.split()
+        class_name = arg_list[0]
 
-    def do_quit(self, args):
-        """Exit the command interpreter"""
-        print("Logging out...")
-        return True
+        if class_name not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
+            return
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
+        instance_id = arg_list[1]
+        key = "{}.{}".format(class_name, instance_id)
+        all_objects = storage.all()
 
-    def do_EOF(self, args):
-        """Exit the command interpreter"""
-        print("Logging out...")
-        return True
+        if key in all_objects:
+            del all_objects[key]
+            storage.save()
+        else:
+            print("** no instance found **")
 
-    def emptyline(self):
-        """Do nothing upon receiving an empty line."""
-        pass
+    def do_all(self, args):
+        """Print all instances based on class name"""
+        arg_list = args.split()
+        if not args or arg_list[0] not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
+            return
+        class_name = arg_list[0]
+        all_objects = storage.all()
+        obj_list = [str(obj) for key, obj in all_objects.items()
+                    if key.split('.')[0] == class_name]
+        print(obj_list)
 
-    def help_quit(self):
-        """Help message for the quit command"""
-        print("Quit command to exit the program")
+    def do_update(self, args):
+        """Update attributes of an object"""
+        if not args:
+            print("** no class name **")
+            return
+        arg_list = args.split()
+        class_name = arg_list[0]
 
-    def help_create(self):
-        """Help message for the create command"""
-        print("Create a new object")
+        if class_name not in HBNBCommand.__classes:
+            print("** class doesn't exist **")
+            return
+        if len(arg_list) < 2:
+            print("** instance id missing **")
+            return
+        instance_id = arg_list[1]
+        key = "{}.{}".format(class_name, instance_id)
+        all_objects = storage.all()
 
-    def help_retrieve(self):
-        """Help message for the retrieve command"""
-        print("Retrieve an object")
+        if key not in all_objects:
+            print("** no instance found **")
+            return
+        if len(arg_list) < 3:
+            print("** no attribute name **")
+            return
+        attr_name = arg_list[2]
+        if len(arg_list) < 4:
+            print("** value missing **")
+            return
+        attr_value = arg_list[3]
+        obj = all_objects[key]
 
-    def help_operations(self):
-        """Help message for the operations command"""
-        print("Perform operations on objects")
-
-    def help_update(self):
-        """Help message for the update command"""
-        print("Update attributes of an object")
-
-    def help_destroy(self):
-        """Help message for the destroy command"""
-        print("Destroy an object")
-
-    def help_help(self):
-        """Help message for the help command"""
-        print("Show help messages for commands")
+        if hasattr(obj, attr_name):
+            attr_type = type(getattr(obj, attr_name))
+            if attr_type == str:
+                setattr(obj, attr_name, attr_value)
+            elif attr_type == int:
+                setattr(obj, attr_name, int(attr_value))
+            elif attr_type == float:
+                setattr(obj, attr_name, float(attr_value))
+            obj.save()
+        else:
+            print("** attribute doesn't exist **")
 
 
 if __name__ == '__main__':
