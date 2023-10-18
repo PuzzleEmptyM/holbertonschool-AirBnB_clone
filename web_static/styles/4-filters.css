@@ -1,0 +1,49 @@
+/* styles/4-filters.css */
+
+.filters {
+    color: white;
+    height: 70px;
+    width: 100%;
+    max-width: 1000px; /* Set a maximum width for the .filters section */
+    margin: 0 auto; /* Center the .filters horizontally */
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px; /* Apply 25-pixel padding on both sides by default */
+    box-sizing: border-box;
+}
+
+.search-button {
+    background-color: #FF5A5F;
+    color: #FFFFFF;
+    font-size: 18px;
+    height: 48px;
+    width: 20%; /* Default width */
+    border: none;
+    border-radius: 4px;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    line-height: 48px; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+    margin-left: auto; /* Push the button to the right */
+}
+
+.search-button:hover {
+    opacity: 0.9;
+}
+
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+    .search-button {
+        width: 30%; /* Adjust button width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-button {
+        width: 40%; /* Further adjust button width for even smaller screens */
+    }
+}

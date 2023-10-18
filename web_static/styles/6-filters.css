@@ -82,6 +82,42 @@ h4 {
     margin-top: 10px; /* Add margin for spacing */
 }
 
+/* Style the filter divs with contextual dropdowns */
+.locations ul,
+.amenities ul {
+    display: none;
+    position: absolute;
+    background-color: #FAFAFA;
+    width: 100%;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0;
+    z-index: 1;
+    top: 100%; /* Adjust this value to control the distance from the container */
+    left: 0;
+}
+
+/* Style the list items within the dropdown */
+.locations ul li,
+.amenities ul li {
+    padding: 10px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+/* Style the "States" within "Locations" filter */
+.locations h2 {
+    font-size: 16px;
+}
+
+/* Style the contextual dropdowns when hovering over the filter div */
+.locations:hover ul,
+.amenities:hover ul {
+    display: block;
+}
+
 /* Additional styles for smaller screens */
 @media (max-width: 768px) {
     .search-button {
